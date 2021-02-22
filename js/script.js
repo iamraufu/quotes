@@ -1,19 +1,19 @@
-setInterval(() => { getData() }, 5000)
-
-function getData() {
+function getQuote() {
+    document.getElementById('quotes').innerText = "";
     fetch('https://type.fit/api/quotes')
         .then(res => res.json())
-        .then(data => displayData(data))
+        .then(data => displayQuote(data))
 }
-const displayData = quotes => {
+
+const displayQuote = quotes => {
+    document.getElementById('btn').style.display = "none"
     quotes.forEach(quote => {
         const quotesContainer = document.getElementById('quotes');
         const quotesP = document.createElement('p')
-        quotesDiv.innerHTML = `
-        <h1>GET RANDOM QUOTES IN EVERY FIVE SECONDS</h1>
-        <P>${quote.text}<br>
-        - ${quote.author}</p>
+        quotesP.innerHTML = `
+        <P class="quote">${quote.text}
+        <small id="author">- ${quote.author}</small></p>
     `
-        quotesContainer.appendChild(quotesP)
+        quotesContainer.appendChild(quotesP);
     });
 }
