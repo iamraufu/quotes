@@ -1,3 +1,13 @@
+document.getElementById('header').innerHTML = `
+<h1>Inspirational Quotes</h1>
+<a href="https://github.com/iamraufu"><img src="image/g.png" id="github"></a>
+`;
+
+document.getElementById('container').innerHTML = `
+<button onclick="getQuote()" id="btn">Click To Get Quotes</button>
+<div id="quotes"></div>
+`;
+
 function getQuote() {
     document.getElementById('quotes').innerText = "";
     fetch('https://type.fit/api/quotes')
