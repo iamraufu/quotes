@@ -1,14 +1,50 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
-body {
-    background-image: url(../image/bg.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh;
-    background-size: cover;
-    overflow-y: hidden;
+#header {
+    position: sticky;
+    top: 0;
+    background-color: #0a0a23;
     color: white;
+    width: 100%;
     text-align: center;
+}
+
+#container {
+    margin: auto;
+    width: 50vw;
+}
+
+.quote {
+    margin: 10px;
+    border: 1px solid #f0f0f0;
+    background-color: gainsboro;
+    padding: 10px;
+}
+
+#author {
+    color: gray;
+}
+
+#github {
+    top: 0;
+}
+
+button {
+    background-color: lightgreen;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    height: 50px;
+    width: 150px;
+    margin-top: 2em;
+}
+
+button:hover {
+    background-color: rgb(58, 233, 58);
+    cursor: pointer;
 }
