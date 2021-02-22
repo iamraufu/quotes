@@ -5,13 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qutoes | Raufu Prezens</title>
+    <title>Quotes | Raufu Prezens</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div id="quotes"></div>
+    <div id="header">
+        <h1>Inspirational Quotes</h1>
+        <a href="https://github.com/iamraufu"><img src="image/g.png" id="github"></a>
+    </div>
+    <div id="container">
+        <button onclick="getQuote()" id="btn">Click To Get Quotes</button>
+        <div id="quotes"></div>
+    </div>
+
 </body>
 
 </html>
